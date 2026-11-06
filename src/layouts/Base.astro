@@ -24,7 +24,9 @@ interface Props {
 }
 
 const { title, description, privada = false, ogTitle, ogDescription } = Astro.props;
-const canonical = new URL(Astro.url.pathname, SITE_URL + "/").href;
+// Con build.format "file" el pathname llega como /index.html o /pagina.html
+const ruta = Astro.url.pathname.replace(/(index)?\.html$/, "");
+const canonical = new URL(ruta, SITE_URL + "/").href;
 const ogImage = `${SITE_URL}/og.jpg`;
 const fuentes = privada ? [corm400, jost400] : [corm400, corm400i, jost300, jost400];
 ---

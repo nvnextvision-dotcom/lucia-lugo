@@ -70,6 +70,12 @@ test("los botones generales van al menú de Square y la consulta gratis a su ser
   assert.equal(consulta.href, SQUARE_SERVICE_URL + "VQPJYPEJEZMGECHBTDXBU2WT");
 });
 
+test("canonical y Open Graph usan SITE_URL", () => {
+  assert.match(index, new RegExp(`<link rel="canonical" href="${SITE_URL}/"`));
+  assert.match(index, new RegExp(`<meta property="og:url" content="${SITE_URL}/"`));
+  assert.match(index, new RegExp(`<meta property="og:image" content="${SITE_URL}/og.jpg"`));
+});
+
 test("la landing no publica la dirección exacta", () => {
   assert.doesNotMatch(index, /Daniel Court|29662/);
   assert.match(index, /Mauldin, SC, a minutos de Greenville/);
