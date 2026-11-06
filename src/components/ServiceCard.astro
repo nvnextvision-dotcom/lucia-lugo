@@ -1,0 +1,45 @@
+---
+import { Image, Picture } from "astro:assets";
+import symbol from "../assets/symbol.jpg";
+import { bookUrl } from "../config";
+import { CATEGORIAS, formatoDuracion, formatoPrecio, type Servicio } from "../data/servicios";
+
+interface Props {
+  servicio: Servicio;
+}
+const { servicio: s } = Astro.props;
+---
+
+<article class:list={["card", { featured: s.destacado }]} data-categoria={s.categoria} data-slug={s.slug}>
+  {
+    s.foto ? (
+      <div class="card-media">
+        <Picture
+          src={s.foto}
+          alt={s.fotoAlt ?? ""}
+          formats={["avif", "webp"]}
+          widths={[380, 560, 760]}
+          sizes="(max-width: 700px) calc(100vw - 40px), 380px"
+        />
+      </div>
+    ) : (
+      <div class="card-media sin-foto" aria-hidden="true">
+        <Image src={symbol} alt="" width={84} height={84} densities={[1, 2]} />
+      </div>
+    )
+  }
+  <span class="cat">{CATEGORIAS[s.categoria]}</span>
+  <h3>{s.nombre}</h3>
+  {s.badge && <span class="badge">{s.badge}</span>}
+  <p>{s.descripcion}</p>
+  <div class="meta">
+    <div class="price">{formatoPrecio(s.precioUsd)}<small>{formatoDuracion(s.duracionMin)}</small></div>
+    <a
+      class="btn btn-primary"
+      href={bookUrl(s.squareItemId)}
+      target="_blank"
+      rel="noopener"
+      aria-label={`Reservar ${s.nombre}`}
+      data-square-id={s.squareItemId}>Reservar</a>
+  </div>
+</article>

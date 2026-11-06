@@ -1,0 +1,25 @@
+---
+import Brand from "./Brand.astro";
+import { NEGOCIO, waLink } from "../config";
+---
+
+<footer>
+  <div class="wrap">
+    <div>
+      <Brand claro />
+      <p>Cejas, micropigmentación, pestañas y piel en Mauldin, cerca de Greenville, Carolina del Sur.</p>
+    </div>
+    <div>
+      <h2 class="h4">Contacto</h2>
+      <p><a href={waLink()} target="_blank" rel="noopener">WhatsApp {NEGOCIO.whatsappVisible}</a></p>
+      <p><a href={NEGOCIO.instagramUrl} target="_blank" rel="noopener">Instagram @{NEGOCIO.instagramUsuario}</a></p>
+      <p><a href={`mailto:${NEGOCIO.email}`}>{NEGOCIO.email}</a></p>
+    </div>
+    <div>
+      <h2 class="h4">Horario</h2>
+      <p>{NEGOCIO.horario.dias}<br />{NEGOCIO.horario.textoLargo}</p>
+      <p>Domingo cerrado</p>
+    </div>
+    <div class="legal"><span>© <span id="yr">{new Date().getFullYear()}</span> Lucia Lugo Studio</span><span>Diseño y estrategia: Next Vision</span></div>
+  </div>
+</footer>

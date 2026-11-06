@@ -1,0 +1,17 @@
+---
+import Brand from "./Brand.astro";
+import { SQUARE_MENU_URL } from "../config";
+---
+
+<header class="nav" id="nav">
+  <div class="wrap">
+    <Brand />
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#como-reservar">Cómo reservar</a>
+      <a href="#sobre-lucia">Sobre Lucía</a>
+      <a href="#preguntas">Preguntas</a>
+      <a class="btn btn-primary" href={SQUARE_MENU_URL} target="_blank" rel="noopener">Reservar cita</a>
+    </nav>
+  </div>
+</header>

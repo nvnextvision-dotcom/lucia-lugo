@@ -1,0 +1,15 @@
+---
+import { Image } from "astro:assets";
+import symbol from "../assets/symbol.jpg";
+
+interface Props {
+  /** En el footer el logo va en crema sobre fondo oscuro. */
+  claro?: boolean;
+}
+const { claro = false } = Astro.props;
+---
+
+<a class="brand" href="#top" aria-label="Lucia Lugo Studio, inicio" style={claro ? "margin-bottom:14px" : undefined}>
+  <Image src={symbol} alt="" width={44} height={44} densities={[1, 2]} loading="eager" />
+  <span style={claro ? "color:var(--cream)" : undefined}>Lucia Lugo<small style={claro ? "color:var(--lilac)" : undefined}> STUDIO</small></span>
+</a>

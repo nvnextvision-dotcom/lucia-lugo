@@ -1,0 +1,22 @@
+# build
+dist
+.astro
+.vercel/
+
+# dependencias
+node_modules
+
+# iCloud (npm run icloud)
+*.nosync
+
+# referencia de diseño local (no se publica)
+.referencia/
+
+# logs / entorno
+npm-debug.log*
+.env
+.env.*
+!.env.example
+
+# sistema
+.DS_Store

@@ -1,0 +1,96 @@
+---
+import Base from "../layouts/Base.astro";
+import Nav from "../components/Nav.astro";
+import Hero from "../components/Hero.astro";
+import Servicios from "../components/Servicios.astro";
+import ComoReservar from "../components/ComoReservar.astro";
+import Confianza from "../components/Confianza.astro";
+import SobreLucia from "../components/SobreLucia.astro";
+import Preguntas from "../components/Preguntas.astro";
+import CTA from "../components/CTA.astro";
+import Footer from "../components/Footer.astro";
+import WhatsAppFlotante from "../components/WhatsAppFlotante.astro";
+import "../styles/global.css";
+import { NEGOCIO, SITE_URL, SQUARE_MENU_URL } from "../config";
+
+// Datos estructurados para SEO local. Sin calle: solo ciudad y estado.
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "@id": `${SITE_URL}/#negocio`,
+  name: NEGOCIO.nombre,
+  description: "Micropigmentación natural, diseño de cejas, laminado, lifting de pestañas, faciales y depilación en Mauldin, cerca de Greenville SC.",
+  url: `${SITE_URL}/`,
+  image: `${SITE_URL}/og.jpg`,
+  logo: `${SITE_URL}/apple-touch-icon.png`,
+  telephone: `+${NEGOCIO.whatsapp}`,
+  email: NEGOCIO.email,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: NEGOCIO.ciudad,
+    addressRegion: NEGOCIO.region,
+    addressCountry: "US",
+  },
+  areaServed: ["Mauldin, SC", "Greenville, SC"],
+  openingHoursSpecification: [
+    {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: NEGOCIO.horario.abre,
+      closes: NEGOCIO.horario.cierra,
+    },
+  ],
+  potentialAction: { "@type": "ReserveAction", target: SQUARE_MENU_URL },
+  sameAs: [NEGOCIO.instagramUrl],
+};
+---
+
+<Base
+  title="Lucia Lugo Studio · Cejas, micropigmentación y piel en Mauldin – Greenville, SC"
+  description="Micropigmentación natural, diseño de cejas, laminado, lifting de pestañas, faciales y depilación en Mauldin, cerca de Greenville SC. Elige tu servicio y reserva tu cita en un minuto."
+  ogTitle="Lucia Lugo Studio · Belleza real para vidas reales"
+  ogDescription="Cejas, pestañas y piel en Mauldin – Greenville, SC. Reserva tu cita en un minuto."
+>
+  <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)} />
+  <a class="skip" href="#servicios">Saltar a los servicios</a>
+  <Nav />
+  <main id="top">
+    <Hero />
+    <Servicios />
+    <ComoReservar />
+    <Confianza />
+    <SobreLucia />
+    <Preguntas />
+    <CTA />
+  </main>
+  <Footer />
+  <WhatsAppFlotante />
+</Base>
+
+<script>
+  // Menú: fondo al hacer scroll
+  const nav = document.getElementById("nav")!;
+  const alScroll = () => nav.classList.toggle("scrolled", scrollY > 10);
+  addEventListener("scroll", alScroll, { passive: true });
+  alScroll();
+
+  // Animaciones de entrada
+  const rv = document.querySelectorAll(".rv");
+  if ("IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      (es) => es.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("in");
+          io.unobserve(e.target);
+        }
+      }),
+      { threshold: 0.12 },
+    );
+    rv.forEach((el) => io.observe(el));
+  } else {
+    rv.forEach((el) => el.classList.add("in"));
+  }
+
+  // Año del pie siempre actual, aunque el sitio no se vuelva a publicar
+  document.getElementById("yr")!.textContent = String(new Date().getFullYear());
+</script>

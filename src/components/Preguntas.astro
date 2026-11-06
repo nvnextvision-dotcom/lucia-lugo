@@ -1,0 +1,39 @@
+---
+import { waLink } from "../config";
+
+// [pregunta, respuesta en HTML]
+const FAQ: [string, string][] = [
+  ["¿Cuánto dura la micropigmentación?", "Es un procedimiento semipermanente que dura hasta dos años, según tu tipo de piel y cuidados. Para mantener el color existe el retoque anual."],
+  ["¿Duele?", "La mayoría de clientas lo describen como una molestia leve y soportable. Lucía te explica en la cita cómo se maneja y puedes pedir pausas cuando lo necesites."],
+  ["¿Necesito un retoque?", "Sí: la cita de perfeccionamiento, dentro de los 60 días siguientes a tu primera sesión, termina de fijar el pigmento y corrige cualquier detalle."],
+  ["¿Qué cuidados tengo después?", "<ul><li>No mojes ni frotes la zona los primeros días.</li><li>Evita sol, sauna, piscina y maquillaje en las cejas mientras cicatriza.</li><li>No retires costritas: deja que caigan solas.</li></ul>Lucía te da la guía completa al terminar tu cita."],
+  ["¿No sé qué servicio elegir?", "Reserva la consulta sin costo en el calendario: en 30 minutos analizamos tu piel, tus cejas y lo que buscas, y te recomendamos la mejor opción."],
+  ["¿Cuánto dura el lifting de pestañas?", "Hasta 4 semanas con efecto rímel, sin pestañas postizas."],
+  ["¿Dónde están y qué horario tienen?", "En Mauldin, SC, a minutos de Greenville. Lunes a sábado de 9:00am a 5:00pm. Al reservar recibes la dirección exacta."],
+  ["¿Cómo reservo y pago?", "Toca “Reservar”: se abre el calendario de Lucía, donde eliges servicio, día y hora y completas el pago en línea de forma segura con Square. La confirmación te llega al momento."],
+];
+---
+
+<section class="sec faq" id="preguntas">
+  <div class="wrap">
+    <div class="rv">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2>Lo que todas preguntan antes de su cita</h2>
+      <p class="lead" style="margin-top:16px">¿No ves tu duda? Escríbele a Lucía y te responde personalmente.</p>
+      <p style="margin-top:22px"><a class="btn btn-ghost" href={waLink()} target="_blank" rel="noopener">Preguntar por WhatsApp</a></p>
+    </div>
+    <div class="rv">
+      {
+        FAQ.map(([q, a]) => (
+          <details>
+            <summary>
+              {q}
+              <span class="pm" aria-hidden="true">+</span>
+            </summary>
+            <div class="ans" set:html={a} />
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>

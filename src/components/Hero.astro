@@ -1,0 +1,55 @@
+---
+import { Image, Picture } from "astro:assets";
+import luciaCut from "../assets/lucia-cut.webp";
+import symbol from "../assets/symbol.jpg";
+import browSm from "../assets/brow-sm.jpg";
+import Check from "./Check.astro";
+import Spark from "./Spark.astro";
+import { NEGOCIO, SQUARE_MENU_URL } from "../config";
+---
+
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-copy rv">
+      <p class="eyebrow">Cejas · Pestañas · Piel — Mauldin / Greenville, SC</p>
+      <h1>Belleza real para <em>vidas reales</em></h1>
+      <p class="lead">Micropigmentación natural y personalizada, laminado, lifting y depilación. Mira los servicios y precios, y reserva tu día y hora en línea en menos de un minuto.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href={SQUARE_MENU_URL} target="_blank" rel="noopener">Reservar mi cita</a>
+        <a class="btn btn-ghost" href="#servicios">Ver servicios y precios</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><Check />Consulta sin costo</span>
+        <span class="chip"><Check />Diseño según tu rostro</span>
+        <span class="chip"><Check />{NEGOCIO.horario.dias}, {NEGOCIO.horario.textoCorto}</span>
+      </div>
+    </div>
+
+    <div class="stage">
+      <span class="bigword" aria-hidden="true">Lugo</span>
+      <Spark class="s1" />
+      <Spark class="s2" />
+      <Spark class="s3" />
+      <div class="arch-line" aria-hidden="true"></div>
+      <div class="arch" aria-hidden="true"></div>
+      <div class="figure">
+        <Picture
+          src={luciaCut}
+          formats={["avif", "webp"]}
+          fallbackFormat="webp"
+          widths={[340, 430, 680, 800]}
+          sizes="(max-width: 900px) min(68vw, 330px), clamp(300px, 31vw, 430px)"
+          alt="Lucía Lugo sonriendo, con blazer amarillo pastel y los brazos cruzados"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </div>
+      <div class="ring" aria-hidden="true">
+        <svg viewBox="0 0 148 148"><defs><path id="circ" d="M74,74 m-58,0 a58,58 0 1,1 116,0 a58,58 0 1,1 -116,0"></path></defs><text><textPath href="#circ">CEJAS · MICROPIGMENTACIÓN · PESTAÑAS · PIEL ·</textPath></text></svg>
+        <Image src={symbol} alt="" width={80} height={80} densities={[1, 2]} />
+      </div>
+      <div class="float f-design"><Image src={browSm} alt="" width={52} height={52} densities={[1, 2]} /><div><b>Diseño a tu medida</b>según tu rostro</div></div>
+      <div class="float f-years"><b>Hasta 2 años</b>con cejas hechas gracias a la micropigmentación</div>
+    </div>
+  </div>
+</section>

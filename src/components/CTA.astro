@@ -1,0 +1,16 @@
+---
+import { SQUARE_MENU_URL, bookUrl } from "../config";
+import { CONSULTA } from "../data/servicios";
+---
+
+<section class="cta">
+  <div class="wrap">
+    <p class="eyebrow">Tu ritual de confianza</p>
+    <h2>Cinco minutos más de sueño cada mañana</h2>
+    <p>Reserva hoy y deja de dibujar tus cejas todos los días.</p>
+    <div class="hero-ctas" style="justify-content:center">
+      <a class="btn btn-primary" href={SQUARE_MENU_URL} target="_blank" rel="noopener">Reservar mi cita</a>
+      <a class="btn btn-ghost" href={bookUrl(CONSULTA.squareItemId)} target="_blank" rel="noopener">Agendar consulta gratis</a>
+    </div>
+  </div>
+</section>

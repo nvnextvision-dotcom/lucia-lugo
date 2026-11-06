@@ -1,0 +1,159 @@
+---
+// Kit interno de respuestas rápidas para Lucía. No se enlaza desde la web,
+// lleva noindex/nofollow y queda fuera del sitemap.
+import { Image } from "astro:assets";
+import Base from "../layouts/Base.astro";
+import symbol from "../assets/symbol.jpg";
+import "../styles/respuestas.css";
+import { SITE_URL, SQUARE_MENU_URL, bookUrl } from "../config";
+import { CONSULTA, SERVICIOS, formatoPrecio } from "../data/servicios";
+
+const SERV = `${SITE_URL}/#servicios`;
+const FAQ = `${SITE_URL}/#preguntas`;
+const BOOK = SQUARE_MENU_URL;
+const CONSULTA_URL = bookUrl(CONSULTA.squareItemId);
+// La dirección exacta solo se comparte con clientas que ya tienen cita.
+const DIRECCION = "143 Daniel Court, Mauldin, SC 29662";
+
+const precio = (slug: string) => formatoPrecio(SERVICIOS.find((s) => s.slug === slug)!.precioUsd);
+
+type Respuesta = [titulo: string, atajo: string, texto: string];
+const KIT: [string, Respuesta[]][] = [
+  ["Primer contacto", [
+    ["Bienvenida (quiero información)", "/hola",
+`¡Hola, hermosa! 💕 Gracias por escribirme.
+Aquí tienes todos mis servicios con precios y duración, y puedes elegir tu día y hora directamente:
+👉 ${SERV}
+
+Si tienes alguna duda, cuéntame qué te gustaría hacerte y te ayudo ✨`],
+    ["Precios", "/precios",
+`¡Claro! 😊 Estos son algunos de mis servicios:
+• Diseño y depilación de cejas: ${precio("diseno")}
+• Depilación + henna o tinte híbrido: ${precio("henna")}
+• Laminado de cejas: ${precio("laminado")}
+• Lifting de pestañas: ${precio("lifting")}
+• Micropigmentación de cejas: ${precio("micro-sombreado")}
+
+Puedes ver el menú completo y reservar aquí 👉 ${SERV}`],
+    ["¿Cómo agendo?", "/agendar",
+`¡Muy fácil! 🗓️ Entra a mi calendario, elige tu servicio, día y hora, y asegura tu cita con el pago en línea:
+👉 ${BOOK}
+
+Te llega la confirmación al momento 💕 Si quieres ver antes los servicios y precios: ${SERV}`],
+    ["No sabe qué elegir", "/consulta",
+`Te recomiendo empezar con una consulta sin costo (30 min) 💕 Revisamos tu piel, la forma de tu ceja y lo que buscas, y te digo qué procedimiento te va mejor.
+Resérvala aquí 👉 ${CONSULTA_URL}`],
+    ["Fuera de horario", "/horario",
+`¡Gracias por escribir! 🌙 Atiendo de lunes a sábado de 9:00am a 5:00pm y te respondo en cuanto pueda.
+Mientras tanto puedes ver servicios y reservar aquí 👉 ${BOOK}`],
+  ]],
+  ["Dudas frecuentes", [
+    ["¿Duele la micropigmentación?", "/duele",
+`Es una pregunta muy normal 😊 La mayoría de mis clientas lo describen como una molestia leve y soportable, y durante la cita hacemos pausas cuando lo necesites.
+Aquí respondo las dudas más comunes 👉 ${FAQ}`],
+    ["¿Cuánto dura?", "/dura",
+`La micropigmentación dura hasta 2 años, según tu tipo de piel y cuidados ✨ El lifting de pestañas dura hasta 4 semanas.
+Más información aquí 👉 ${FAQ}`],
+    ["Retoque", "/retoque",
+`El retoque de perfeccionamiento (${precio("perfeccionamiento")}) se hace dentro de los 60 días siguientes a tu primera sesión y termina de fijar el color 💕 Para mantenerlas cada año está el retoque anual (${precio("retoque-anual")}).`],
+    ["¿Dónde estás?", "/ubicacion",
+`Estoy en Mauldin, SC, a pocos minutos de Greenville 📍 Al confirmar tu cita te envío la dirección exacta.`],
+  ]],
+  ["Citas", [
+    ["Confirmar cita", "/confirmar",
+`¡Tu cita está confirmada! 💕
+🗓️ [día] a las [hora]
+💄 [servicio]
+📍 ${DIRECCION}
+
+Te recomiendo llegar 5 minutos antes. Si necesitas cambiar la hora, avísame con al menos 24 horas, por favor 🙏`],
+    ["No hay disponibilidad", "/otrahora",
+`¡Gracias por reservar! 💕 Justo esa hora ya está ocupada. Te puedo ofrecer [opción 1] o [opción 2]. ¿Cuál te queda mejor?`],
+    ["Recordatorio 24 h", "/recordatorio",
+`¡Hola! 😊 Te recuerdo tu cita de mañana a las [hora] para [servicio]. ¿Me confirmas que vienes? 💕`],
+    ["Cuidados después de micropigmentación", "/cuidados",
+`Gracias por confiar en mí 💕 Para un resultado perfecto:
+• No mojes ni frotes la zona los primeros días
+• Evita sol, sauna, piscina y maquillaje en las cejas mientras cicatriza
+• No retires las costritas, deja que caigan solas
+Cualquier duda, escríbeme 🙏`],
+  ]],
+  ["Después de la cita", [
+    ["Pedir reseña", "/resena",
+`¡Me encantó atenderte! 💕 Si te gustó el resultado, ¿me ayudarías con una reseña o etiquetándome en una historia (@lucialugo.studio)? Me ayuda muchísimo a llegar a más mujeres ✨`],
+    ["Recordar retoque o próxima cita", "/volver",
+`¡Hola, hermosa! 💕 Ya va siendo momento de tu [retoque / próxima cita de cejas]. Puedes elegir tu día aquí 👉 ${BOOK}`],
+  ]],
+];
+---
+
+<Base title="Respuestas rápidas · Lucia Lugo Studio" privada>
+  <header>
+    <div class="wrap">
+      <Image src={symbol} alt="" width={56} height={56} densities={[1, 2]} loading="eager" />
+      <p class="eyebrow">Herramienta interna · no se muestra en la web</p>
+      <h1>Respuestas rápidas para tus clientas</h1>
+      <p>Copia y pega en Instagram o WhatsApp. Cada respuesta lleva a tu página, donde la clienta ve servicios, precios y reserva sola. Así dejas de escribir lo mismo diez veces al día.</p>
+    </div>
+  </header>
+  <main class="wrap">
+    <div class="how">
+      <b>Guárdalas una sola vez como respuestas rápidas</b>
+      <ol>
+        <li><b>Instagram:</b> Configuración → Herramientas para empresas → Respuestas guardadas → “+”. Usa el atajo de cada tarjeta (ej. <span class="key">/precios</span>).</li>
+        <li><b>WhatsApp Business:</b> Herramientas para la empresa → Respuestas rápidas → “+”, con el mismo atajo.</li>
+        <li>Al escribir el atajo en un chat, el texto completo aparece listo para enviar.</li>
+      </ol>
+    </div>
+    <div id="kit">
+      {
+        KIT.map(([seccion, items]) => (
+          <>
+            <h2>{seccion}</h2>
+            <div class="grid">
+              {items.map(([titulo, atajo, texto]) => (
+                <div class="card" data-atajo={atajo}>
+                  <div class="top">
+                    <h3>{titulo}</h3>
+                    <span class="key">{atajo}</span>
+                  </div>
+                  <div class="txt">{texto}</div>
+                  <button type="button" aria-label={`Copiar respuesta ${atajo}`}>Copiar respuesta</button>
+                </div>
+              ))}
+            </div>
+          </>
+        ))
+      }
+    </div>
+    <p class="sr" aria-live="polite" id="aviso"></p>
+  </main>
+  <footer>Lucia Lugo Studio · kit preparado por Next Vision</footer>
+</Base>
+
+<script>
+  const aviso = document.getElementById("aviso")!;
+  document.getElementById("kit")!.addEventListener("click", async (e) => {
+    const b = (e.target as HTMLElement).closest("button");
+    if (!b) return;
+    const texto = b.parentElement!.querySelector(".txt")!.textContent ?? "";
+    try {
+      await navigator.clipboard.writeText(texto);
+    } catch {
+      const a = document.createElement("textarea");
+      a.value = texto;
+      document.body.appendChild(a);
+      a.select();
+      document.execCommand("copy");
+      a.remove();
+    }
+    b.textContent = "¡Copiada!";
+    b.classList.add("done");
+    aviso.textContent = "Respuesta copiada";
+    setTimeout(() => {
+      b.textContent = "Copiar respuesta";
+      b.classList.remove("done");
+      aviso.textContent = "";
+    }, 1600);
+  });
+</script>

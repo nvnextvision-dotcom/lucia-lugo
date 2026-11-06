@@ -1,0 +1,40 @@
+---
+import ServiceCard from "./ServiceCard.astro";
+import { FILTROS, SERVICIOS } from "../data/servicios";
+---
+
+<section class="sec" id="servicios">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div>
+        <p class="eyebrow">Menú de servicios</p>
+        <h2>Precios claros, sin sorpresas</h2>
+      </div>
+      <p class="lead">Toca “Reservar” y elige tu servicio, día y hora en el calendario de Lucía. Ahí mismo puedes asegurar tu cita con el pago en línea.</p>
+    </div>
+    <div class="tabs" role="group" aria-label="Filtrar servicios" id="tabs">
+      {
+        FILTROS.map((f, i) => (
+          <button class="tab" type="button" data-filtro={f.clave} aria-pressed={i === 0 ? "true" : "false"}>
+            {f.etiqueta}
+          </button>
+        ))
+      }
+    </div>
+    <div class="grid" id="grid" aria-live="polite">
+      {SERVICIOS.map((s) => <ServiceCard servicio={s} />)}
+    </div>
+  </div>
+</section>
+
+<script>
+  const tabs = [...document.querySelectorAll<HTMLButtonElement>("#tabs .tab")];
+  const cards = [...document.querySelectorAll<HTMLElement>("#grid .card")];
+  for (const tab of tabs) {
+    tab.addEventListener("click", () => {
+      const filtro = tab.dataset.filtro;
+      tabs.forEach((t) => t.setAttribute("aria-pressed", String(t === tab)));
+      cards.forEach((c) => (c.hidden = filtro !== "todos" && c.dataset.categoria !== filtro));
+    });
+  }
+</script>

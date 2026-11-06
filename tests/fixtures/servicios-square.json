@@ -1,0 +1,151 @@
+{
+  "fuente": "Square, menú de Lucia Lugo Studio (consultado 2026-11-06)",
+  "menu_general": "https://beauty-blush-104930.square.site/",
+  "formato_enlace": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/{square_item_id}",
+  "servicios": [
+    {
+      "nombre_square": "Consulta",
+      "square_item_id": "VQPJYPEJEZMGECHBTDXBU2WT",
+      "precio_usd": 0,
+      "duracion_min": 30,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/VQPJYPEJEZMGECHBTDXBU2WT",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/619e10c85afe4770c2cc90d80824afd1935c7b45/original.jpeg"
+    },
+    {
+      "nombre_square": "Micropigmentacion de cejas Sombreado",
+      "square_item_id": "HDI4S3EH75KW3ESKOZN4E3DF",
+      "precio_usd": 340,
+      "duracion_min": 210,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/HDI4S3EH75KW3ESKOZN4E3DF",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/406d15c43591757853da045eea9184d787ce9af5/original.jpeg"
+    },
+    {
+      "nombre_square": "Micropigmentacion Tecnica Combinada",
+      "square_item_id": "WXTQ5XGIHFSRGS2EY63ICQ44",
+      "precio_usd": 340,
+      "duracion_min": 210,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/WXTQ5XGIHFSRGS2EY63ICQ44",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/8ee3718d44de01964e22b6886690c0a00417167d/original.jpeg"
+    },
+    {
+      "nombre_square": "Cita de perfeccionamiento o retoque",
+      "square_item_id": "V2EC6XZSVY2P22OTVLQ2X3IV",
+      "precio_usd": 60,
+      "duracion_min": 120,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/V2EC6XZSVY2P22OTVLQ2X3IV",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/42c693824e35777c008fda143d888d1f3ab904e7/original.jpeg"
+    },
+    {
+      "nombre_square": "Retoque Anual",
+      "square_item_id": "BBEBDD2Z3Q7I5GZWW7XVVG7I",
+      "precio_usd": 220,
+      "duracion_min": 210,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/BBEBDD2Z3Q7I5GZWW7XVVG7I",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/3084926c866ead162259a9391bec0003bdb8fe56/original.jpeg"
+    },
+    {
+      "nombre_square": "Remocion Quimica",
+      "square_item_id": "AUTPDUAD6KYCDVV2ORCBC37P",
+      "precio_usd": 60,
+      "duracion_min": 40,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/AUTPDUAD6KYCDVV2ORCBC37P",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/546b873c9601b83f715365f65b731fe2e9178761/original.jpeg"
+    },
+    {
+      "nombre_square": "Diseño y Depilacion de cejas",
+      "square_item_id": "PKDA4UA7Y7DWAF6H6LDBUZ3H",
+      "precio_usd": 30,
+      "duracion_min": 30,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/PKDA4UA7Y7DWAF6H6LDBUZ3H",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/e860915f6aa7671f665ca5d4ec6b379a4e320c97/original.jpeg"
+    },
+    {
+      "nombre_square": "Depilacion y tinte henna o hybrido de cejas",
+      "square_item_id": "EJJ27DBMKVBIBDLOZOL2PO7I",
+      "precio_usd": 40,
+      "duracion_min": 40,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/EJJ27DBMKVBIBDLOZOL2PO7I",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/413e3a2a5be2d092cfc0647d80d20b9007c2136e/original.jpeg"
+    },
+    {
+      "nombre_square": "Laminado de cejas",
+      "square_item_id": "L6SQFI2BYC75Q2TD2FW2NLBT",
+      "precio_usd": 80,
+      "duracion_min": 80,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/L6SQFI2BYC75Q2TD2FW2NLBT",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/5c9aa990b593686119d82f2bfa68132d8085e1f3/original.jpeg"
+    },
+    {
+      "nombre_square": "Lifting de pestañas",
+      "square_item_id": "BGG7MGEX27T63HSNLDCBYQTL",
+      "precio_usd": 80,
+      "duracion_min": 60,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/BGG7MGEX27T63HSNLDCBYQTL",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/264e0544df781f5da9196cd51d3b109fd9fd7c50/original.jpeg"
+    },
+    {
+      "nombre_square": "Hidratacion de labios",
+      "square_item_id": "4COZNED64INNVPPPMK7663OJ",
+      "precio_usd": 80,
+      "duracion_min": 90,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/4COZNED64INNVPPPMK7663OJ",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/69fc60736ae4dd8acb90ba8ec1c711641502cc9d/original.jpeg"
+    },
+    {
+      "nombre_square": "Full Facial",
+      "square_item_id": "3HHFKD3CWZ4AJLFVHJPUAYGO",
+      "precio_usd": 100,
+      "duracion_min": 120,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/3HHFKD3CWZ4AJLFVHJPUAYGO",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/6381751a1d595812f0cdc9cf17c7222e1e1847ec/original.jpeg"
+    },
+    {
+      "nombre_square": "Microneedling facial",
+      "square_item_id": "YQOTSZMSR7LQIB5IKA7PFTCC",
+      "precio_usd": 150,
+      "duracion_min": 120,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/YQOTSZMSR7LQIB5IKA7PFTCC",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/09a368d2e566b840f6843b69084f50b65febaa4b/original.jpeg"
+    },
+    {
+      "nombre_square": "Microneding corporal",
+      "square_item_id": "CC6UBRKH6M5F5EJD2PMY3ZM2",
+      "precio_usd": 150,
+      "duracion_min": 120,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/CC6UBRKH6M5F5EJD2PMY3ZM2",
+      "imagen_square": "https://items-images-production.s3.us-west-2.amazonaws.com/files/ae7e96552cc5ac52cd50159004e12d782733a264/original.jpeg"
+    },
+    {
+      "nombre_square": "Paquete Microneedling 3 sesiones",
+      "square_item_id": "WEHO3OAQ5ZKFSYBLRYEL4CO3",
+      "precio_usd": 300,
+      "duracion_min": 90,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/WEHO3OAQ5ZKFSYBLRYEL4CO3",
+      "imagen_square": null
+    },
+    {
+      "nombre_square": "Depilacion de axilas",
+      "square_item_id": "YGKCGMMTDIHMB7XL2M6TKBQW",
+      "precio_usd": 30,
+      "duracion_min": 30,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/YGKCGMMTDIHMB7XL2M6TKBQW",
+      "imagen_square": null
+    },
+    {
+      "nombre_square": "Depilacion de piernas",
+      "square_item_id": "RDRD4J2KI665W2RESY2DCGMB",
+      "precio_usd": 35,
+      "duracion_min": 60,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/RDRD4J2KI665W2RESY2DCGMB",
+      "imagen_square": null
+    },
+    {
+      "nombre_square": "Depilacion bikini",
+      "square_item_id": "ZC3QDH2CSRNNG3KHQ7N7UGX3",
+      "precio_usd": 45,
+      "duracion_min": 30,
+      "url_reserva": "https://book.squareup.com/appointments/rh7bc1iiq4lg5l/location/LH8EY6C040PFP/services/ZC3QDH2CSRNNG3KHQ7N7UGX3",
+      "imagen_square": null
+    }
+  ]
+}

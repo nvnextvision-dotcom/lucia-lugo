@@ -1,0 +1,26 @@
+:root{--bordeaux:#4e1424;--plum:#584246;--pine:#024b41;--spruce:#107c72;--cream:#fdefdc;--cream-2:#f6e2d6;--lilac:#bea4a7;--line:#e6cfc6;--white:#fffaf3}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--plum);font-family:'Jost',system-ui,sans-serif;line-height:1.55;font-size:16px}
+.wrap{width:min(1040px,100% - 32px);margin:0 auto}
+header{background:var(--bordeaux);color:var(--cream);padding:44px 0 40px}
+header img{width:56px;height:56px;border-radius:50%;margin-bottom:18px}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;font-weight:500;color:var(--lilac)}
+h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:500;font-size:clamp(38px,6vw,58px);line-height:1.05;margin:8px 0 12px}
+header p{color:#e8d6cf;font-weight:300;max-width:640px}
+.how{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px 24px;margin:28px 0 8px;display:grid;gap:6px}
+.how b{color:var(--bordeaux);font-weight:500}
+.how ol{padding-left:20px;display:grid;gap:4px}
+h2{font-family:'Cormorant Garamond',Georgia,serif;color:var(--bordeaux);font-weight:600;font-size:30px;margin:36px 0 14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:16px}
+.card{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:22px;display:flex;flex-direction:column;gap:12px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.card h3{font-size:17px;font-weight:500;color:var(--bordeaux)}
+.key{font-family:ui-monospace,Menlo,monospace;font-size:13px;background:var(--cream-2);color:var(--bordeaux);padding:3px 9px;border-radius:999px;white-space:nowrap}
+.txt{white-space:pre-wrap;font-size:15px;background:var(--cream);border-radius:14px;padding:14px 16px;flex:1;color:#3d2a2e}
+button{font:inherit;border:0;cursor:pointer;border-radius:999px;padding:11px 16px;background:var(--bordeaux);color:var(--cream);font-weight:500;font-size:14px;transition:background .2s,transform .15s}
+button:hover{background:#5e2333}
+button:active{transform:scale(.97)}
+button.done{background:var(--pine)}
+button:focus-visible{outline:3px solid var(--spruce);outline-offset:3px}
+footer{padding:44px 0;font-size:13px;text-align:center}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

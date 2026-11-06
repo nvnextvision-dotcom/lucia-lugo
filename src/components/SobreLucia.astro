@@ -1,0 +1,30 @@
+---
+import { Picture } from "astro:assets";
+import brow from "../assets/brow.jpg";
+---
+
+<section class="sec about" id="sobre-lucia">
+  <div class="wrap">
+    <div class="about-img rv">
+      <Picture
+        src={brow}
+        formats={["avif", "webp"]}
+        widths={[400, 600, 800, 1100]}
+        sizes="(max-width: 900px) calc(100vw - 40px), 520px"
+        alt="Diseño de cejas en Lucia Lugo Studio"
+      />
+    </div>
+    <div class="rv">
+      <p class="eyebrow">Sobre Lucía</p>
+      <h2>Especialista en miradas naturales</h2>
+      <blockquote>Cejas que se ven tuyas, solo que mejor.</blockquote>
+      <p class="lead">Cada diseño empieza con tus medidas, la forma de tu rostro y lo que te gusta. Nada de cejas copiadas ni resultados exagerados: un trabajo natural, personalizado y hecho con calma.</p>
+      <div class="points">
+        <div class="point"><b>Micropigmentación</b><span>Sombreado y técnica combinada</span></div>
+        <div class="point"><b>Cejas y pestañas</b><span>Diseño, henna, laminado y lifting</span></div>
+        <div class="point"><b>Piel</b><span>Faciales, microneedling y labios</span></div>
+        <div class="point"><b>Depilación</b><span>Cera para rostro y cuerpo</span></div>
+      </div>
+    </div>
+  </div>
+</section>
